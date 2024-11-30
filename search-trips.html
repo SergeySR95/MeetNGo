@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск путешествий - TravelMates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Подключение файла стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">TravelMates</a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="trips.html">Путешествия</a></li>
+                    <li><a href="trip-planner.html">Создать путешествие</a></li>
+                    <li><a href="search-trips.html">Поиск путешествий</a></li>
+                    <li><a href="profile.html">Мой профиль</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="profile.html" class="btn">Мой профиль</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main>
+        <div class="container">
+            <h1>Поиск путешествий</h1>
+            <p>Найдите идеальное путешествие, используя фильтры или ключевые слова.</p>
+            
+            <!-- Поле поиска -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Введите название путешествия, город или ключевое слово">
+                <button class="btn btn-primary" id="search-btn">Найти</button>
+            </div>
+
+            <!-- Фильтры -->
+            <div class="filters">
+                <div class="filter-item">
+                    <label for="filter-dates">Даты</label>
+                    <input type="date" id="filter-dates" name="filter_dates">
+                </div>
+                <div class="filter-item">
+                    <label for="filter-type">Тип путешествия</label>
+                    <select id="filter-type" name="filter_type">
+                        <option value="">Все</option>
+                        <option value="adventure">Приключенческое</option>
+                        <option value="cultural">Культурное</option>
+                        <option value="beach">Пляжный отдых</option>
+                        <option value="eco">Экологическое</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="filter-budget">Бюджет (до $)</label>
+                    <input type="number" id="filter-budget" name="filter_budget" placeholder="Введите сумму">
+                </div>
+                <button class="btn btn-secondary" id="apply-filters">Применить фильтры</button>
+            </div>
+
+            <!-- Результаты поиска -->
+            <div class="search-results">
+                <h2>Результаты поиска</h2>
+                <div class="trips-list" id="results-container">
+                    <!-- Пример результата -->
+                    <div class="trip-item">
+                        <img src="images/trip1.jpg" alt="Изображение путешествия">
+                        <div class="trip-info">
+                            <h3>Путешествие в Париж</h3>
+                            <p>Культурное путешествие с посещением основных достопримечательностей.</p>
+                            <p><strong>Даты:</strong> 10.12.2023 - 20.12.2023</p>
+                            <p><strong>Бюджет:</strong> $1000</p>
+                            <a href="trip-detail.html" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                    <!-- Другие результаты будут добавляться динамически -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">О нас</a>
+                <a href="#">Контакты</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="icons/twitter.png" alt="Twitter"></a>
+            </div>
+            <p>&copy; 2023 TravelMates</p>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript-файла -->
+    <script src="script.js"></script>
+</body>
+</html>

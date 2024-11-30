@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль пользователя - TravelMates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Подключение файла стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">TravelMates</a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="trips.html">Путешествия</a></li>
+                    <li><a href="trip-planner.html">Создать путешествие</a></li>
+                    <li><a href="search-trips.html">Поиск путешествий</a></li>
+                    <li><a href="profile.html">Мой профиль</a></li>
+                </ul>
+            </nav>
+            </nav>
+            <div class="auth-buttons">
+                <!-- Предполагаем, что пользователь авторизован -->
+                <a href="#" class="btn">Выйти</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main>
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="images/user-avatar.png" alt="Аватар пользователя">
+                    <button class="btn" id="edit-avatar-btn">Изменить фото</button>
+                </div>
+                <div class="profile-info">
+                    <h1>Имя Фамилия</h1>
+                    <p class="profile-description">Краткое описание о пользователе. Здесь можно рассказать о своих интересах, любимых направлениях и опыте путешествий.</p>
+                    <button class="btn btn-primary" id="edit-profile-btn">Редактировать профиль</button>
+                </div>
+            </div>
+
+            <!-- Раздел с путешествиями -->
+            <div class="profile-trips">
+                <h2>Мои путешествия</h2>
+                <!-- Список путешествий, созданных пользователем -->
+                <div class="trips-list">
+                    <div class="trip-item">
+                        <img src="images/trip1.jpg" alt="Изображение путешествия">
+                        <div class="trip-info">
+                            <h3>Название путешествия</h3>
+                            <p>Краткое описание путешествия.</p>
+                            <p><strong>Даты:</strong> 10.12.2023 - 20.12.2023</p>
+                            <a href="#" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                    <!-- Добавьте больше элементов путешествий по необходимости -->
+                </div>
+
+                <h2>Путешествия, в которых участвую</h2>
+                <!-- Список путешествий, в которых пользователь является участником -->
+                <div class="trips-list">
+                    <div class="trip-item">
+                        <img src="images/trip2.jpg" alt="Изображение путешествия">
+                        <div class="trip-info">
+                            <h3>Название путешествия</h3>
+                            <p>Краткое описание путешествия.</p>
+                            <p><strong>Даты:</strong> 05.01.2024 - 15.01.2024</p>
+                            <a href="#" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                    <!-- Добавьте больше элементов путешествий по необходимости -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">О нас</a>
+                <a href="#">Контакты</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="icons/twitter.png" alt="Twitter"></a>
+            </div>
+            <p>&copy; 2023 TravelMates</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для редактирования профиля -->
+    <div id="edit-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-edit-profile">&times;</span>
+            <h2>Редактировать профиль</h2>
+            <form id="edit-profile-form">
+                <label for="edit-name">Имя</label>
+                <input type="text" id="edit-name" name="name" value="Имя Фамилия" required>
+                
+                <label for="edit-description">Описание</label>
+                <textarea id="edit-description" name="description" rows="4">Краткое описание о пользователе.</textarea>
+                
+                <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript-файла -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Планирование путешествия - TravelMates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Подключение файла стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">TravelMates</a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="trips.html">Путешествия</a></li>
+                    <li><a href="trip-planner.html">Создать путешествие</a></li>
+                    <li><a href="search-trips.html">Поиск путешествий</a></li>
+                    <li><a href="profile.html">Мой профиль</a></li>
+                </ul>
+            </nav>
+            </nav>
+            <div class="auth-buttons">
+                <a href="profile.html" class="btn">Мой профиль</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main>
+        <div class="container">
+            <h1>Планирование нового путешествия</h1>
+            <p>Заполните форму ниже, чтобы создать путешествие и пригласить участников.</p>
+            
+            <form id="trip-form" class="trip-form">
+                <!-- Название путешествия -->
+                <label for="trip-name">Название путешествия</label>
+                <input type="text" id="trip-name" name="trip_name" placeholder="Введите название путешествия" required>
+                
+                <!-- Описание путешествия -->
+                <label for="trip-description">Описание</label>
+                <textarea id="trip-description" name="trip_description" rows="4" placeholder="Добавьте краткое описание путешествия" required></textarea>
+                
+                <!-- Даты путешествия -->
+                <div class="trip-dates">
+                    <div>
+                        <label for="start-date">Дата начала</label>
+                        <input type="date" id="start-date" name="start_date" required>
+                    </div>
+                    <div>
+                        <label for="end-date">Дата окончания</label>
+                        <input type="date" id="end-date" name="end_date" required>
+                    </div>
+                </div>
+                
+                <!-- Маршрут -->
+                <label for="trip-route">Маршрут</label>
+                <textarea id="trip-route" name="trip_route" rows="3" placeholder="Опишите основные точки маршрута" required></textarea>
+                
+                <!-- Бюджет -->
+                <label for="trip-budget">Ориентировочный бюджет (в $)</label>
+                <input type="number" id="trip-budget" name="trip_budget" placeholder="Например, 500" min="0" required>
+                
+                <!-- Тип путешествия -->
+                <label for="trip-type">Тип путешествия</label>
+                <select id="trip-type" name="trip_type" required>
+                    <option value="adventure">Приключенческое</option>
+                    <option value="cultural">Культурное</option>
+                    <option value="beach">Пляжный отдых</option>
+                    <option value="eco">Экологическое</option>
+                    <option value="other">Другое</option>
+                </select>
+                
+                <!-- Кнопка отправки -->
+                <button type="submit" class="btn btn-primary">Создать путешествие</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Футер сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">О нас</a>
+                <a href="#">Контакты</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="icons/twitter.png" alt="Twitter"></a>
+            </div>
+            <p>&copy; 2023 TravelMates</p>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript-файла -->
+    <script src="script.js"></script>
+</body>
+</html>

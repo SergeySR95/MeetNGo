@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Совместное планирование путешествий</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение файла стилей -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключение Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">TravelMates</a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="trips.html">Путешествия</a></li>
+                    <li><a href="trip-planner.html">Создать путешествие</a></li>
+                    <li><a href="search-trips.html">Поиск путешествий</a></li>
+                    <li><a href="profile.html">Мой профиль</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn" id="login-btn">Вход</a>
+                <a href="#" class="btn btn-primary" id="register-btn">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Геро-секция -->
+    <section class="hero">
+        <div class="container">
+            <h1>Планируйте путешествия вместе</h1>
+            <p>Находите попутчиков и создавайте незабываемые маршруты.</p>
+            <a href="/trip-planner.html" class="btn btn-large">Присоединиться сейчас</a>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features">
+        <div class="container">
+            <h2>Почему TravelMates?</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <img src="icons/companions.png" alt="Попутчики">
+                    <h3>Найдите попутчиков</h3>
+                    <p>Объединяйтесь с единомышленниками для совместных путешествий.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="icons/planning.png" alt="Планирование">
+                    <h3>Совместное планирование</h3>
+                    <p>Создавайте маршруты и делитесь идеями с другими участниками.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="icons/savings.png" alt="Экономия">
+                    <h3>Экономьте на поездках</h3>
+                    <p>Разделяйте расходы и получайте лучшие предложения.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="icons/security.png" alt="Безопасность">
+                    <h3>Безопасное сообщество</h3>
+                    <p>Проверенные профили и отзывы для вашей безопасности.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные направления -->
+    <section class="destinations">
+        <div class="container">
+            <h2>Популярные направления</h2>
+            <div class="destinations-list">
+                <!-- Карточки направлений -->
+                <div class="destination-item">
+                    <img src="images/paris.jpg" alt="Париж">
+                    <h3>Париж</h3>
+                </div>
+                <div class="destination-item">
+                    <img src="images/bali.jpg" alt="Бали">
+                    <h3>Бали</h3>
+                </div>
+                <div class="destination-item">
+                    <img src="images/newyork.jpg" alt="Нью-Йорк">
+                    <h3>Нью-Йорк</h3>
+                </div>
+                <!-- Добавьте больше карточек по необходимости -->
+            </div>
+            <a href="/trips.html" class="btn">Посмотреть все направления</a>
+        </div>
+    </section>
+
+    <!-- Отзывы пользователей -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Отзывы наших пользователей</h2>
+            <div class="testimonials-list">
+                <div class="testimonial-item">
+                    <p>"С помощью TravelMates я нашел отличных попутчиков для поездки в Японию!"</p>
+                    <h4>Александр П.</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Совместное планирование сделало наше путешествие незабываемым."</p>
+                    <h4>Мария К.</h4>
+                </div>
+                <!-- Добавьте больше отзывов по необходимости -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно для входа -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-login">&times;</span>
+            <h2>Вход</h2>
+            <form id="login-form">
+                <label for="login-email">Электронная почта</label>
+                <input type="email" id="login-email" name="email" required>
+                
+                <label for="login-password">Пароль</label>
+                <input type="password" id="login-password" name="password" required>
+                
+                <button type="submit" class="btn btn-primary">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для регистрации -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-register">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="register-form">
+                <label for="register-name">Имя</label>
+                <input type="text" id="register-name" name="name" required>
+                
+                <label for="register-email">Электронная почта</label>
+                <input type="email" id="register-email" name="email" required>
+                
+                <label for="register-password">Пароль</label>
+                <input type="password" id="register-password" name="password" required>
+                
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Футер сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">О нас</a>
+                <a href="#">Контакты</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="icons/twitter.png" alt="Twitter"></a>
+            </div>
+            <p>&copy; 2023 TravelMates</p>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript-файла -->
+    <script src="script.js"></script>
+
+</body>
+</html>
